@@ -1,0 +1,148 @@
+extends ../layouts/_default.pug
+
+block variables
+  - const pageTitle = "Skoda Yeti/ Yeti Outdoor Electrical Wiring Diagrams"
+  - const pageDescription = "Skoda Yeti/ Yeti Outdoor Electrical Schematic Diagrams с бензиновыми двигателями: CBZB TSI 1.2 л, CAXA 1.4 л TSI, CDAB/CDAA TSI 1.8 л и дизельными CAYC TDI 1.6 л, TDI 2.0 л; схемы электрических соединений, распиновка, расположение жгутов проводки и разъёмов читать онлайн, скачать бесплатно, купить"
+  - const pageKeywords = "шкода, skoda, škoda, йети, a-suv, yeti, outdoor, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, руководство, ремонт, эксплуатации, пользователя, инструкция, техническому, обслуживанию, рекомендации, устройство, мануал, электрические, схемы, читать, онлайн, скачать, автомобиль, двигатель, запчасти, кузов, размер, бесплатно, книгу, купить"
+  - const pageLink = "test.html"
+
+  block variables
+  - const descriptionLinks = []
+  - descriptionLinks.push({ href: 'yeti.html', text: 'Шкода Йети руководство по ремонту и эксплуатации здесь' })
+  - descriptionLinks.push({ href: 'yeti-overview.html', text: 'Шкода Йети Знакомство с автомобилем программа самообучения' })
+  - descriptionLinks.push({ href: 'expluatacia/yeti_09.html', text: 'Skoda Yeti руководство по эксплуатации (издание 2009)' })
+  - descriptionLinks.push({ href: 'expluatacia/yeti_12.html', text: 'Skoda Yeti руководство по эксплуатации (издание 2012)' })
+  - descriptionLinks.push({ href: 'expluatacia/yeti-2014-11.html', text: 'Skoda Yeti руководство по эксплуатации (издание 2014)' })
+  - descriptionLinks.push({ href: 'expluatacia/yeti-2016-05.html', text: 'Skoda Yeti руководство по эксплуатации (издание май 2016)' })
+
+
+  // URL для видео и документа
+  - const scribdUrl = "https://www.scribd.com/embeds/243454667/content?start_page=1&view_mode=scroll&access_key=key-JdZR63lOJqV3wXT0zLuN&show_recommendations=false"
+  - const youtubeUrl1 = "https://www.youtube.com/embed/lOjyrLMIooM"
+  - const youtubeUrl2 = "https://www.youtube.com/embed/ibChlBMtD9o"
+
+block content
+  // Блок title
+  section#title.title
+    .title__container
+      h1.title__heading Шкода Йети принципиальные электрические схемы
+      h2.title__subheading читать онлайн, скачать, купить
+
+  // Блок description
+  section#description.description
+    .description__container
+      .description__content
+        h3.description__text SUV Skoda Yeti (Typ 5L)/ Yeti Outdoor Electrical Schematic Diagrams с бензиновыми двигателями: CBZB TSI 1.2 л (1197 см³) 105 л.с./77 кВт, CAXA TSI 1.4 л (1390 см³) 122 л.с./90 кВт, CDAB/CDAA TSI 1.8 л (1798 см³) 152-160 л.с./112-118 кВт и дизельными CAYC TDI 1.6 л (1598 см³) 105 л.с./77 кВт, CFHA/CFHF/CFHC/CLCB/CBDB/CFHC/CFJA/CEGA TDI 2.0 л (1968 см³) 110-140-170 л.с./81-103-125 кВт; руководство по техническому обслуживанию и ремонту, схемы электрических соединений, распиновка, расположение жгутов проводки и разъёмов, технические характеристики. Шкода Йети компактный кроссовер с кузовами универсал повышенной вместимости передне- и полноприводные модели первого поколения выпуска с 2009 года
+
+        ul#description-links.description__links
+          each link in descriptionLinks
+            li.description__item
+              a.description__link(href=link.href) #{link.text}
+
+  // Блок viewer
+  section#pdf-viewer.viewer
+    .viewer__container
+      iframe#scribd-doc.viewer__frame(
+        src=scribdUrl
+        title="Руководство Skoda Yeti"
+        aria-label="PDF документ с руководством Skoda Yeti"
+        sandbox="allow-scripts allow-same-origin allow-popups"
+        loading="lazy"
+      )
+
+  // Блок video
+  section#video.video
+    .video__container
+      iframe#video-first.video__frame(
+        src=youtubeUrl1
+        title="Видео 1 о Skoda Yeti"
+        aria-label="Видео о Skoda Yeti часть 1"
+        allowfullscreen
+        loading="lazy"
+        referrerpolicy="no-referrer"
+      )
+      iframe#video-second.video__frame(
+        src=youtubeUrl2
+        title="Видео 2 о Skoda Yeti"
+        aria-label="Видео о Skoda Yeti часть 2"
+        allowfullscreen
+        loading="lazy"
+        referrerpolicy="no-referrer"
+      )
+
+  // Блок article
+  section#article.article
+    .article__container
+      .article__content
+        h4.article__title Škoda Yeti/ Yeti Outdoor общая информация (Шкода Йети 2009-2014)
+        h5.article__title--sub Новый ŠKODA Yeti
+
+        p.article__text  Вдохновение с новым ŠKODA Yeti ждет Вас независимо от того, какую дорогу Вы выбираете. Будь то город с его меняющейся архитектурой, огнями и сумасшедшим ритмом или сельская местность, где заканчиваются дороги и начинается мир полный чудес… Новый Yeti выпускается в двух оригинальных версиях: Yeti и Yeti Outdoor. Таким образом, Вы можете уверенно двигаться по улицам Вашего города, открывая их с новой стороны, или отправиться в путешествие. Более того, Вы можете сами сформировать характер своего автомобиля, выбрав для него двигатель, передний или полный привод, представленные в широком ассортименте аксессуары. Каждый Yeti — это уникальный автомобиль с выдающимися характеристиками. Это означает, что Вы можете наслаждаться простором, мастерством изготовления и безопасностью. Автомобиль также оснащен новейшими технологиями, отражающими наиболее современные тенденции. И последним по порядку, но не по значимости является тот факт, что автомобиль буквально наполнен решениями Simply Clever. Независимо от того, выберете Вы Yeti или Yeti Outdoor, захватывающие ощущения Вам обеспечены. 
+
+        .article__media
+        picture.article__picture
+          source(srcset="images/avto/skoda/middle/yeti-wd.avif" type="image/avif")
+          source(srcset="images/avto/skoda/middle/yeti-wd.webp" type="image/webp")
+          img.article__image(
+            src="images/avto/skoda/middle/yeti-wd.jpg"
+            width="220"
+            height="300"
+            title="Yeti"
+            alt="Skoda Yeti"
+            loading="lazy"
+            decoding="async"
+          ) 
+        
+        p.article__text Идеи и решения Simply Clever значительно повышают практичность автомобиля. Они расширяют его транспортировочные возможности, помогают поддерживать порядок в автомобиле и делают путешествия для всех пассажиров еще более приятными. Пассажиры задних сидений наверняка оценят встроенные в спинки обоих передних сидений складные столики с держателями для напитков, которые, конечно, можно использовать и для других целей. Для еще большего комфорта пассажиров задних сидений предусмотрены держатели для напитков, которые наряду с другими аксессуарами, такими как прикуриватель и пепельницы, входят в функциональный пакет. 
+
+        .article__media
+        picture.article__picture
+          source(srcset="images/avto/skoda/middle/yeti-wd.avif" type="image/avif")
+          source(srcset="images/avto/skoda/middle/yeti-wd.webp" type="image/webp")
+          img.article__image(
+            src="images/avto/skoda/middle/yeti-wd.jpg"
+            width="220"
+            height="300"
+            title="Yeti"
+            alt="Skoda Yeti"
+            loading="lazy"
+            decoding="async"
+          ) 
+
+        p.article__text Складывающаяся спинка переднего пассажирского сиденья делает автомобиль еще более универсальным, позволяя перевозить длинномерные предметы. При заполнении мусорной корзины ее можно легко извлечь и очистить. Она легко устанавливается в вещевые отделения в панелях передних и задних дверей. Также в вещевых отделениях передних дверей предусмотрен держатель для литровой бутылки. Модельная линейка Yeti олицетворяет собой современную дизайнерскую концепцию ŠKODA. В то же время для различных комплектаций Yeti существуют специальные решения. 
+
+        .article__media
+        picture.article__picture
+          source(srcset="images/avto/skoda/middle/yeti-wd.avif" type="image/avif")
+          source(srcset="images/avto/skoda/middle/yeti-wd.webp" type="image/webp")
+          img.article__image(
+            src="images/avto/skoda/middle/yeti-wd.jpg"
+            width="220"
+            height="300"
+            title="Yeti"
+            alt="Skoda Yeti"
+            loading="lazy"
+            decoding="async"
+          )  
+        
+        p.article__text Yeti и Yeti Outdoor — это два разных подхода к дизайну, основанные на различных требованиях к кроссоверам и особенностях их эксплуатации. Хотя различия видны с первого взгляда, обе версии имеют много общего. Наиболее примечательными являются новый силуэт и элементы внешнего оснащения, определяемые дизайнерской концепцией ŠKODA. К таким элементам относятся капот, решетка радиатора, головные и противотуманные фары. Эмблема ŠKODA является самой эффектной деталью капота. Изменения также коснулись дизайна передних крыльев, обоих бамперов и пятой двери.
+
+        p.article__text Стильному Yeti, без сомнения, не страшны любые дороги, но город — его родная стихия. Превосходный обзор во время движения позволяет Вам наслаждаться вождением, придавая уверенность за рулем, которая часто необходима в условиях плотного городского потока. Компактный кроссовер Yeti легко можно припарковать в ограниченном пространстве. Выразительный и в то же время практичный дизайн версии Yeti подчеркнут цветными элементами кузова. Сюда входят защитные боковые молдинги на дверях, декоративные накладки на пороги и бамперы. Другой примечательной особенностью автомобиля является изящная решетка воздухозаборника переднего бампера. Рейлинги на крышу предлагаются в серебристом или черном исполнении. Привлекательная и по-городскому элегантная версия Yeti выглядит еще более выразительно благодаря легкосплавным колесным дискам (на фотографии показаны 17-дюймовые легкосплавные диски Scudo).
+        
+        p.article__text Более суровый внешний вид Yeti Outdoor явно свидетельствует о его решительном характере. Нет ничего более захватывающего, чем открывать для себя новые горизонты, и с первого взгляда на версию Outdoor становится ясно, что она идеально подходит для этой цели.
+
+        p.article__text Двухцветные или черные рейлинги на крышу, черные защитные боковые молдинги на дверях, черные накладки на нижнюю часть бамперов, а также большие вертикальные дефлекторы на воздухозаборниках переднего бампера и привлекательные легкосплавные колесные диски (на фотографии показаны 17-дюймовые легкосплавные диски Matterhorn) — все эти детали подчеркивают индивидуальность Yeti Outdoor.
+
+      .article__media
+        picture.article__picture
+          source(srcset="images/avto/skoda/middle/yeti-wd.avif" type="image/avif")
+          source(srcset="images/avto/skoda/middle/yeti-wd.webp" type="image/webp")
+          img.article__image(
+            src="images/avto/skoda/middle/yeti-wd.jpg"
+            width="220"
+            height="300"
+            title="Yeti"
+            alt="Skoda Yeti"
+            loading="lazy"
+            decoding="async"
+          )

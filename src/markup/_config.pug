@@ -1,0 +1,23 @@
+//- dev или prod
+- const env = "dev";
+
+- const version = "1.0.0";
+
+- let baseUrl = "/";
+- const siteUrl = "http://localhost:3000";
+
+- const themeColor = "#000";
+
+- const projectTitle = "Название проекта";
+- const projectDescription = "Описание проекта";
+- const projectKeywords = "руководство, ремонт, эксплуатации, пользователя, инструкция, техническому, обслуживанию, рекомендации, устройство, мануал, электрические, схемы, читать, онлайн, скачать, автомобиль, двигатель, запчасти, кузов, размер, бесплатно, книгу, купить"
+- const projectType = "website"; //- website или article
+
+- const google = "UA-42729412-2";
+- const yandex = "22212565";
+
+//- Актуально если сборка отправляется в github pages
+//- gulp-template - имя репозитория, который отправляется в github page
+//- Раскомментируйте условие и измените ссылку на свою
+- if (env === "prod")
+    - baseUrl = "/";

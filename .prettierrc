@@ -1,0 +1,16 @@
+{
+  "singleQuote": true,
+  "printWidth": 100,
+  "semi": false,
+  "tabWidth": 2,
+  "trailingComma": "all",
+  "useTabs": false,
+  "endOfLine": "lf",
+  "bracketSpacing": true,
+  "arrowParens": "avoid",
+  "plugins": ["@prettier/plugin-pug"],
+  "pugAttributeSeparator": "none",
+  "pugCommentPreserveSpaces": "trim-all",
+  "pugSortAttributes": "asc",
+  "pugWrapAttributesThreshold": 1
+}
