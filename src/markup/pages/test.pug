@@ -1,6 +1,7 @@
 extends ../layouts/_default.pug
 
 block variables
+<<<<<<< HEAD
   - const pageTitle = "Skoda Yeti/ Yeti Outdoor Electrical Wiring Diagrams"
   - const pageDescription = "Skoda Yeti/ Yeti Outdoor Electrical Schematic Diagrams с бензиновыми двигателями: CBZB TSI 1.2 л, CAXA 1.4 л TSI, CDAB/CDAA TSI 1.8 л и дизельными CAYC TDI 1.6 л, TDI 2.0 л; схемы электрических соединений, распиновка, расположение жгутов проводки и разъёмов читать онлайн, скачать бесплатно, купить"
   - const pageKeywords = "шкода, skoda, škoda, йети, a-suv, yeti, outdoor, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, руководство, ремонт, эксплуатации, пользователя, инструкция, техническому, обслуживанию, рекомендации, устройство, мануал, электрические, схемы, читать, онлайн, скачать, автомобиль, двигатель, запчасти, кузов, размер, бесплатно, книгу, купить"
@@ -18,10 +19,21 @@ block variables
 
   // URL для видео и документа
   - const scribdUrl = "https://www.scribd.com/embeds/243454667/content?start_page=1&view_mode=scroll&access_key=key-JdZR63lOJqV3wXT0zLuN&show_recommendations=false"
+=======
+  - const pageTitle = "Шкода Йети принципиальные электрические схемы"
+  - const pageDescription = "Некоторое описание главной страницы"
+  - const pageLink = ""
+  
+  // URL для Scribd
+  - const scribdUrl = "https://www.scribd.com/embeds/243454667/content?start_page=1&view_mode=scroll&access_key=key-JdZR63lOJqV3wXT0zLuN&show_recommendations=false"
+  
+  // URLs для YouTube видео
+>>>>>>> dd143dbb9a2e859c10f824d9ce29867bfe0a85f3
   - const youtubeUrl1 = "https://www.youtube.com/embed/lOjyrLMIooM"
   - const youtubeUrl2 = "https://www.youtube.com/embed/ibChlBMtD9o"
 
 block content
+<<<<<<< HEAD
   // Блок title
   section#title.title
     .title__container
@@ -146,3 +158,26 @@ block content
             loading="lazy"
             decoding="async"
           )
+=======
+  section.container.section
+    h1 #{pageTitle}
+    p #{pageDescription}
+    h2 читать онлайн, скачать, купить
+
+  section.pdf-viewer
+    .pdf-viewer__scribd
+      iframe.pdf-viewer__scribd--full(
+        src=scribdUrl
+      )
+
+  section.video
+    .video__youtube
+      iframe.video__youtube--fifty(
+        src=youtubeUrl1
+        allowfullscreen
+      )
+      iframe.video__youtube--fifty(
+        src=youtubeUrl2
+        allowfullscreen
+      )
+>>>>>>> dd143dbb9a2e859c10f824d9ce29867bfe0a85f3
