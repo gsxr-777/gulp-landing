@@ -1,16 +1,34 @@
 {
   "singleQuote": true,
+<<<<<<< HEAD
+<<<<<<< HEAD
   "printWidth": 100,
+=======
+  "printWidth": 120,
+>>>>>>> d3a24cd2dc0180d4baf89e25ede94c95b7d23644
+=======
+  "printWidth": 100,
+>>>>>>> dd143dbb9a2e859c10f824d9ce29867bfe0a85f3
   "semi": false,
   "tabWidth": 2,
   "trailingComma": "all",
   "useTabs": false,
   "endOfLine": "lf",
   "bracketSpacing": true,
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> dd143dbb9a2e859c10f824d9ce29867bfe0a85f3
   "arrowParens": "avoid",
   "plugins": ["@prettier/plugin-pug"],
   "pugAttributeSeparator": "none",
   "pugCommentPreserveSpaces": "trim-all",
   "pugSortAttributes": "asc",
   "pugWrapAttributesThreshold": 1
+<<<<<<< HEAD
+=======
+  "arrowParens": "avoid"
+>>>>>>> d3a24cd2dc0180d4baf89e25ede94c95b7d23644
+=======
+>>>>>>> dd143dbb9a2e859c10f824d9ce29867bfe0a85f3
 }

@@ -30,7 +30,11 @@ div(hidden)
 }
 
 .icon-card {
+<<<<<<< HEAD
   background-image: url('../images/sprite-mono.svg#icon-card-view');
+=======
+  background-image: url('../img/sprite-mono.svg#icon-card-view');
+>>>>>>> d3a24cd2dc0180d4baf89e25ede94c95b7d23644
 }
 ```
 
