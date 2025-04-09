@@ -51,7 +51,7 @@ const config = {
         multi: `${srcPath}/assets/icons/multi`, // цветные иконки
       },
       fonts: `${srcPath}/assets/fonts`, // шрифты
-      videos: `${srcPath}/assets/videos`, // шрифты
+      videos: `${srcPath}/assets/videos`, // видео
     },
   },
 
