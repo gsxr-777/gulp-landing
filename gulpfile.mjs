@@ -1,4 +1,5 @@
-import { series, parallel } from 'gulp'
+import { src, dest, series, parallel } from 'gulp'
+import htmlmin from 'gulp-htmlmin'
 
 import clear from './gulp/tasks/clear.mjs'
 import server from './gulp/tasks/server.mjs'
@@ -15,6 +16,18 @@ import config from './gulp/config.mjs'
 
 config.setEnv()
 
+// Задача минификации HTML
+const minifyHTML = () => {
+  return src('build/**/*.html')
+    .pipe(htmlmin({
+      collapseWhitespace: true,
+      removeComments: true,
+      minifyCSS: true,
+      minifyJS: true
+    }))
+    .pipe(dest('build'))
+}
+
 export const proxy = server
 
 export const modernizr = modernizrBuild
@@ -28,6 +41,7 @@ export const build = series(
   webpackBuild,
   pugBuild,
   assetsBuild,
+  minifyHTML // Добавляем минификацию HTML в конец сборки
 )
 
 export const watch = series(

@@ -12,5 +12,5 @@
 
 @use 'helpers' as *;
 
-@include font-face('Roboto', '../fonts/roboto/roboto-regular');
-@include font-face('Roboto', '../fonts/roboto/roboto-medium', 500);
+@include font-face('CyrillicGoth', '../fonts/cyrillicgoth');
+@include font-face('Casanova', '../fonts/casanova');
