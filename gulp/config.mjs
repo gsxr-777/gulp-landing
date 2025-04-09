@@ -51,7 +51,11 @@ const config = {
         multi: `${srcPath}/assets/icons/multi`, // цветные иконки
       },
       fonts: `${srcPath}/assets/fonts`, // шрифты
+<<<<<<< HEAD
       videos: `${srcPath}/assets/videos`, // видео
+=======
+      videos: `${srcPath}/assets/videos`, // шрифты
+>>>>>>> d3a24cd2dc0180d4baf89e25ede94c95b7d23644
     },
   },
 
@@ -60,7 +64,11 @@ const config = {
     root: buildPath, // корневой каталог
     style: `${buildPath}/css`, // стили
     script: `${buildPath}/js`, // скрипты
+<<<<<<< HEAD
     images: `${buildPath}/images`, // изображения
+=======
+    images: `${buildPath}/img`, // изображения
+>>>>>>> d3a24cd2dc0180d4baf89e25ede94c95b7d23644
     fonts: `${buildPath}/fonts`, // шрифты
     videos: `${buildPath}/videos`, // видео
   },

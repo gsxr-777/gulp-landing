@@ -14,17 +14,29 @@
   "prefer_related_applications": false,
   "icons": [
     {
+<<<<<<< HEAD
       "src": "images/favicon-192.png",
+=======
+      "src": "img/favicon-192.png",
+>>>>>>> d3a24cd2dc0180d4baf89e25ede94c95b7d23644
       "type": "image/png",
       "sizes": "192x192"
     },
     {
+<<<<<<< HEAD
       "src": "images/favicon-512.png",
+=======
+      "src": "img/favicon-512.png",
+>>>>>>> d3a24cd2dc0180d4baf89e25ede94c95b7d23644
       "type": "image/png",
       "sizes": "512x512"
     },
     {
+<<<<<<< HEAD
       "src": "images/favicon.svg",
+=======
+      "src": "img/favicon.svg",
+>>>>>>> d3a24cd2dc0180d4baf89e25ede94c95b7d23644
       "sizes": "any",
       "type": "image/svg",
       "purpose": "maskable"

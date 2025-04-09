@@ -1,8 +1,12 @@
 {
   "validateExtensions": true,
+<<<<<<< HEAD
   "validateIndentation": 2,
   "validateLineBreaks": "LF",
   "validateAttributeSeparator": ", ",
+=======
+  "validateAttributeSeparator": { "separator": ", ", "multiLineSeparator": ",\n  " },
+>>>>>>> d3a24cd2dc0180d4baf89e25ede94c95b7d23644
   "validateAttributeQuoteMarks": "\"",
   "requireSpecificAttributes": [ { "img": [ "src", "width", "height", "alt" ] } ],
   "requireSpaceAfterCodeOperator": true,

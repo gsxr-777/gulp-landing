@@ -19,6 +19,7 @@ config.setEnv()
 // Задача минификации HTML
 const minifyHTML = () => {
   return src('build/**/*.html')
+<<<<<<< HEAD
     .pipe(
       htmlmin({
         collapseWhitespace: true,
@@ -27,6 +28,14 @@ const minifyHTML = () => {
         minifyJS: true,
       }),
     )
+=======
+    .pipe(htmlmin({
+      collapseWhitespace: true,
+      removeComments: true,
+      minifyCSS: true,
+      minifyJS: true
+    }))
+>>>>>>> d3a24cd2dc0180d4baf89e25ede94c95b7d23644
     .pipe(dest('build'))
 }
 
@@ -43,6 +52,7 @@ export const build = series(
   webpackBuild,
   pugBuild,
   assetsBuild,
+<<<<<<< HEAD
   minifyHTML, // Добавляем минификацию HTML в конец сборки
 )
 
@@ -57,6 +67,9 @@ export const buildServe = series(
   assetsBuild,
   minifyHTML,
   server
+=======
+  minifyHTML // Добавляем минификацию HTML в конец сборки
+>>>>>>> d3a24cd2dc0180d4baf89e25ede94c95b7d23644
 )
 
 export const watch = series(
