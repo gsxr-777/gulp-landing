@@ -46,6 +46,19 @@ export const build = series(
   minifyHTML, // Добавляем минификацию HTML в конец сборки
 )
 
+export const buildServe = series(
+  clear,
+  spritesBuild,
+  faviconBuild,
+  imagesBuild,
+  stylesBuild,
+  webpackBuild,
+  pugBuild,
+  assetsBuild,
+  minifyHTML,
+  server
+)
+
 export const watch = series(
   build,
   server,

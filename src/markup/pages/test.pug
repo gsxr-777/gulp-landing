@@ -1,9 +1,16 @@
 extends ../layouts/_default.pug
 
 block variables
-  - const pageTitle = "Шкода Йети принципиальные электрические схемы";
-  - const pageDescription = "Некоторое описание главной страницы";
-  - const pageLink = "";
+  - const pageTitle = "Шкода Йети принципиальные электрические схемы"
+  - const pageDescription = "Некоторое описание главной страницы"
+  - const pageLink = ""
+  
+  // URL для Scribd
+  - const scribdUrl = "https://www.scribd.com/embeds/243454667/content?start_page=1&view_mode=scroll&access_key=key-JdZR63lOJqV3wXT0zLuN&show_recommendations=false"
+  
+  // URLs для YouTube видео
+  - const youtubeUrl1 = "https://www.youtube.com/embed/lOjyrLMIooM"
+  - const youtubeUrl2 = "https://www.youtube.com/embed/ibChlBMtD9o"
 
 block content
   section.container.section
@@ -14,16 +21,16 @@ block content
   section.pdf-viewer
     .pdf-viewer__scribd
       iframe.pdf-viewer__scribd--full(
-        src="https://www.scribd.com/embeds/243454667/content?start_page=1&view_mode=scroll&access_key=key-JdZR63lOJqV3wXT0zLuN&show_recommendations=false"
+        src=scribdUrl
       )
 
   section.video
     .video__youtube
-      iframe.youtube(
-        src="https://www.youtube.com/embed/lOjyrLMIooM"
+      iframe.video__youtube--fifty(
+        src=youtubeUrl1
         allowfullscreen
       )
-      iframe.youtube(
-        src="https://www.youtube.com/embed/ibChlBMtD9o"
+      iframe.video__youtube--fifty(
+        src=youtubeUrl2
         allowfullscreen
       )

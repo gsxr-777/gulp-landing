@@ -7,7 +7,7 @@
     "modernizr": "gulp modernizr",
     "proxy": "gulp proxy",
     "dev": "gulp",
-    "build": "gulp build --production",
+    "build": "gulp buildServe --production",
     "editor-check": "editorconfig-checker --exclude '.git|node_modules|.husky|build|modernizr.js'",
     "format": "prettier --write .",
     "type-check": "tsc --noEmit",

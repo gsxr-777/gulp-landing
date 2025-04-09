@@ -1,5 +1,5 @@
 //- dev или prod
-- const env = "dev";
+- const env = "prod";
 
 - const version = "1.0.0";
 
@@ -12,11 +12,11 @@
 - const projectDescription = "Описание проекта";
 - const projectType = "website"; //- website или article
 
-- const google = "GTM-XXXXXX";
-- const yandex = "XXXXXX";
+- const google = "UA-42729412-2";
+- const yandex = "22212565";
 
 //- Актуально если сборка отправляется в github pages
 //- gulp-template - имя репозитория, который отправляется в github page
 //- Раскомментируйте условие и измените ссылку на свою
 - if (env === "prod")
-    - baseUrl = "/build/";
+    - baseUrl = "/";
