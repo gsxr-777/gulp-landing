@@ -1,0 +1,21 @@
+.article {
+  // Существующие стили...
+
+  &__media--row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+
+  &__media--item {
+    flex: 0 1 auto;
+  }
+
+  // Для адаптивности на мобильных устройствах
+  @media (max-width: 767px) {
+    &__media-row {
+      flex-direction: column;
+    }
+  }
+}

@@ -1,5 +1,4 @@
-// @use '../../node_modules/highlight.js/styles/a11y-light.css';
-
 @use 'base/fonts';
 @use 'base/img';
-@use 'blocks/pdf-viewer';
+@use 'components/pdf-viewer';
+@use 'components/article';

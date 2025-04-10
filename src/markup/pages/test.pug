@@ -1,12 +1,16 @@
 extends ../layouts/_default.pug
 
 block variables
+  //- Метаданные страницы для SEO
   - const pageTitle = "Skoda Yeti/ Yeti Outdoor Electrical Wiring Diagrams"
   - const pageDescription = "Skoda Yeti/ Yeti Outdoor Electrical Schematic Diagrams с бензиновыми двигателями: CBZB TSI 1.2 л, CAXA 1.4 л TSI, CDAB/CDAA TSI 1.8 л и дизельными CAYC TDI 1.6 л, TDI 2.0 л; схемы электрических соединений, распиновка, расположение жгутов проводки и разъёмов читать онлайн, скачать бесплатно, купить"
   - const pageKeywords = "шкода, skoda, škoda, йети, a-suv, yeti, outdoor, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, руководство, ремонт, эксплуатации, пользователя, инструкция, техническому, обслуживанию, рекомендации, устройство, мануал, электрические, схемы, читать, онлайн, скачать, автомобиль, двигатель, запчасти, кузов, размер, бесплатно, книгу, купить"
   - const pageLink = "test.html"
 
-  block variables
+  //- Текст для блока описания
+  - const descriptionText = "SUV Skoda Yeti (Typ 5L)/ Yeti Outdoor Electrical Schematic Diagrams с бензиновыми двигателями: CBZB TSI 1.2 л (1197 см³) 105 л.с./77 кВт, CAXA TSI 1.4 л (1390 см³) 122 л.с./90 кВт, CDAB/CDAA TSI 1.8 л (1798 см³) 152-160 л.с./112-118 кВт и дизельными CAYC TDI 1.6 л (1598 см³) 105 л.с./77 кВт, CFHA/CFHF/CFHC/CLCB/CBDB/CFHC/CFJA/CEGA TDI 2.0 л (1968 см³) 110-140-170 л.с./81-103-125 кВт; руководство по техническому обслуживанию и ремонту, схемы электрических соединений, распиновка, расположение жгутов проводки и разъёмов, технические характеристики. Шкода Йети компактный кроссовер с кузовами универсал повышенной вместимости передне- и полноприводные модели первого поколения выпуска с 2009 года"
+
+  //- Ссылки для блока описания
   - const descriptionLinks = []
   - descriptionLinks.push({ href: 'yeti.html', text: 'Шкода Йети руководство по ремонту и эксплуатации здесь' })
   - descriptionLinks.push({ href: 'yeti-overview.html', text: 'Шкода Йети Знакомство с автомобилем программа самообучения' })
@@ -15,8 +19,7 @@ block variables
   - descriptionLinks.push({ href: 'expluatacia/yeti-2014-11.html', text: 'Skoda Yeti руководство по эксплуатации (издание 2014)' })
   - descriptionLinks.push({ href: 'expluatacia/yeti-2016-05.html', text: 'Skoda Yeti руководство по эксплуатации (издание май 2016)' })
 
-
-  // URL для видео и документа
+  //- URL для видео и документа
   - const scribdUrl = "https://www.scribd.com/embeds/243454667/content?start_page=1&view_mode=scroll&access_key=key-JdZR63lOJqV3wXT0zLuN&show_recommendations=false"
   - const youtubeUrl1 = "https://www.youtube.com/embed/lOjyrLMIooM"
   - const youtubeUrl2 = "https://www.youtube.com/embed/ibChlBMtD9o"
@@ -32,7 +35,8 @@ block content
   section#description.description
     .description__container
       .description__content
-        h3.description__text SUV Skoda Yeti (Typ 5L)/ Yeti Outdoor Electrical Schematic Diagrams с бензиновыми двигателями: CBZB TSI 1.2 л (1197 см³) 105 л.с./77 кВт, CAXA TSI 1.4 л (1390 см³) 122 л.с./90 кВт, CDAB/CDAA TSI 1.8 л (1798 см³) 152-160 л.с./112-118 кВт и дизельными CAYC TDI 1.6 л (1598 см³) 105 л.с./77 кВт, CFHA/CFHF/CFHC/CLCB/CBDB/CFHC/CFJA/CEGA TDI 2.0 л (1968 см³) 110-140-170 л.с./81-103-125 кВт; руководство по техническому обслуживанию и ремонту, схемы электрических соединений, распиновка, расположение жгутов проводки и разъёмов, технические характеристики. Шкода Йети компактный кроссовер с кузовами универсал повышенной вместимости передне- и полноприводные модели первого поколения выпуска с 2009 года
+      
+        h3.description__text #{descriptionText}
 
         ul#description-links.description__links
           each link in descriptionLinks
@@ -53,31 +57,55 @@ block content
   // Блок video
   section#video.video
     .video__container
-      iframe#video-first.video__frame(
-        src=youtubeUrl1
-        title="Видео 1 о Skoda Yeti"
-        aria-label="Видео о Skoda Yeti часть 1"
-        allowfullscreen
-        loading="lazy"
-        referrerpolicy="no-referrer"
-      )
-      iframe#video-second.video__frame(
-        src=youtubeUrl2
-        title="Видео 2 о Skoda Yeti"
-        aria-label="Видео о Skoda Yeti часть 2"
-        allowfullscreen
-        loading="lazy"
-        referrerpolicy="no-referrer"
-      )
+      each url, index in [youtubeUrl1, youtubeUrl2]
+        iframe(
+          id=`video-${index === 0 ? 'first' : 'second'}`
+          class="video__frame"
+          src=url
+          title=`Видео ${index + 1} о Skoda Yeti`
+          aria-label=`Видео о Skoda Yeti часть ${index + 1}`
+          allowfullscreen
+          loading="lazy"
+          referrerpolicy="no-referrer"
+        )
 
   // Блок article
   section#article.article
     .article__container
       .article__content
         h4.article__title Škoda Yeti/ Yeti Outdoor общая информация (Шкода Йети 2009-2014)
-        h5.article__title--sub Новый ŠKODA Yeti
+        h5.article__title--sub Новый ŠKODA Yeti 
 
-        p.article__text  Вдохновение с новым ŠKODA Yeti ждет Вас независимо от того, какую дорогу Вы выбираете. Будь то город с его меняющейся архитектурой, огнями и сумасшедшим ритмом или сельская местность, где заканчиваются дороги и начинается мир полный чудес… Новый Yeti выпускается в двух оригинальных версиях: Yeti и Yeti Outdoor. Таким образом, Вы можете уверенно двигаться по улицам Вашего города, открывая их с новой стороны, или отправиться в путешествие. Более того, Вы можете сами сформировать характер своего автомобиля, выбрав для него двигатель, передний или полный привод, представленные в широком ассортименте аксессуары. Каждый Yeti — это уникальный автомобиль с выдающимися характеристиками. Это означает, что Вы можете наслаждаться простором, мастерством изготовления и безопасностью. Автомобиль также оснащен новейшими технологиями, отражающими наиболее современные тенденции. И последним по порядку, но не по значимости является тот факт, что автомобиль буквально наполнен решениями Simply Clever. Независимо от того, выберете Вы Yeti или Yeti Outdoor, захватывающие ощущения Вам обеспечены. 
+        .article__media--row
+          .article__media--item
+            picture.article__picture
+              source(srcset="images/avto/skoda/big/yeti-outdoor-rear-2014.avif" type="image/avif")
+              source(srcset="images/avto/skoda/big/yeti-outdoor-rear-2014.webp" type="image/webp")
+              img.article__image(
+                src="images/avto/skoda/big/yeti-outdoor-rear-2014.jpg"
+                width="412"
+                height="243"
+                title="Шкода Йети Аутдор 2009-2014"
+                alt="Новый ŠKODA Yeti Outdoor"
+                loading="lazy"
+                decoding="async"
+              )  
+          
+          .article__media--item
+            picture.article__picture
+              source(srcset="images/avto/skoda/big/yeti-rear-2014.avif" type="image/avif")
+              source(srcset="images/avto/skoda/big/yeti-rear-2014.webp" type="image/webp")
+              img.article__image(
+                src="images/avto/skoda/big/yeti-rear-2014.jpg"
+                width="412"
+                height="243"
+                title="Шкода Йети 2009-2014"
+                alt="Новый ŠKODA Yeti"
+                loading="lazy"
+                decoding="async"
+              ) 
+
+        p.article__text  Вдохновение с новым ŠKODA Yeti ждет Вас независимо от того, какую дорогу Вы выбираете. Будь то город с его меняющейся архитектурой, огнями и сумасшедшим ритмом или сельская местность, где заканчиваются дороги и начинается мир полный чудес… Новый Yeti выпускается в двух оригинальных версиях: Yeti и Yeti Outdoor. <br> Таким образом, Вы можете уверенно двигаться по улицам Вашего города, открывая их с новой стороны, или отправиться в путешествие. Более того, Вы можете сами сформировать характер своего автомобиля, выбрав для него двигатель, передний или полный привод, представленные в широком ассортименте аксессуары. <br> Каждый Yeti — это уникальный автомобиль с выдающимися характеристиками. Это означает, что Вы можете наслаждаться простором, мастерством изготовления и безопасностью. Автомобиль также оснащен новейшими технологиями, отражающими наиболее современные тенденции. <br> И последним по порядку, но не по значимости является тот факт, что автомобиль буквально наполнен решениями Simply Clever. Независимо от того, выберете Вы Yeti или Yeti Outdoor, захватывающие ощущения Вам обеспечены. 
 
         .article__media
         picture.article__picture
